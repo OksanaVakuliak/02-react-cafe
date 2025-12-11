@@ -1,13 +1,13 @@
 import type { VoteType } from '../../types/votes';
 import css from './VoteOptions.module.css';
 
-interface VoteOptionsProps {
+interface Props {
   onVote: (type: VoteType) => void;
   onReset: () => void;
   canReset: boolean;
 }
 
-const VoteOptions = ({ onVote, onReset, canReset }: VoteOptionsProps) => {
+const VoteOptions = ({ onVote, onReset, canReset }: Props) => {
   return (
     <div className={css.container}>
       <button className={css.button} onClick={() => onVote('good')}>

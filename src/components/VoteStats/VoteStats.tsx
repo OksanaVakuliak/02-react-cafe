@@ -1,13 +1,13 @@
 import type { Votes } from '../../types/votes';
 import styles from './VoteStats.module.css';
 
-interface VoteStatsProps {
+interface Props {
   votes: Votes;
   totalVotes: number;
   positiveRate: number;
 }
 
-const VoteStats = ({ votes, totalVotes, positiveRate }: VoteStatsProps) => {
+const VoteStats = ({ votes, totalVotes, positiveRate }: Props) => {
   return (
     <div className={styles.container}>
       <p className={styles.stat}>
